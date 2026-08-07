@@ -1405,6 +1405,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@vee-validate/zod@npm:^4.15.1":
+  version: 4.15.1
+  resolution: "@vee-validate/zod@npm:4.15.1"
+  dependencies:
+    type-fest: "npm:^4.8.3"
+    vee-validate: "npm:4.15.1"
+  peerDependencies:
+    zod: ^3.24.0
+  checksum: 10c0/4b6f7a542120abda0e71fded9685344f4d41ce9a09bb04b28f9e339c6b72fa43e2fd2b75156b23914f8a3f348e5edd5ee9d520cd4129fbc3bd4deec3ef9c9800
+  languageName: node
+  linkType: hard
+
 "@vitejs/plugin-vue@npm:^6.0.8":
   version: 6.0.8
   resolution: "@vitejs/plugin-vue@npm:6.0.8"
@@ -4105,6 +4117,7 @@ __metadata:
     "@tsconfig/node24": "npm:^24.0.4"
     "@types/jsdom": "npm:^28.0.3"
     "@types/node": "npm:^24.13.3"
+    "@vee-validate/zod": "npm:^4.15.1"
     "@vitejs/plugin-vue": "npm:^6.0.8"
     "@vitest/eslint-plugin": "npm:^1.6.23"
     "@vue/eslint-config-typescript": "npm:^14.9.0"
@@ -4732,7 +4745,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vee-validate@npm:^4.15.1":
+"vee-validate@npm:4.15.1, vee-validate@npm:^4.15.1":
   version: 4.15.1
   resolution: "vee-validate@npm:4.15.1"
   dependencies:

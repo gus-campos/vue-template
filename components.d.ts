@@ -34,6 +34,6 @@ declare module 'vue' {
     HomeView: typeof import('./src/views/HomeView.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
-    TableView: typeof import('./src/views/HomeView.vue/index.js')['default']
+    TableView: typeof import('./src/views/TableView.vue')['default']
   }
 }
