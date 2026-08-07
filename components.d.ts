@@ -11,7 +11,7 @@ export {}
 /* prettier-ignore */
 declare module 'vue' {
   export interface GlobalComponents {
-    App: typeof import('./src/App.vue')['default']
+    App: typeof import('./src/app/App.vue')['default']
     AuthenticatedLayout: typeof import('./src/layouts/AuthenticatedLayout.vue')['default']
     AuthView: typeof import('./src/views/AuthView.vue')['default']
     DefaultLayout: typeof import('./src/layouts/DefaultLayout.vue')['default']
