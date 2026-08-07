@@ -12,6 +12,9 @@ export {}
 declare module 'vue' {
   export interface GlobalComponents {
     App: typeof import('./src/App.vue')['default']
+    AuthenticatedLayout: typeof import('./src/layouts/AuthenticatedLayout.vue')['default']
+    AuthView: typeof import('./src/views/AuthView.vue')['default']
+    DefaultLayout: typeof import('./src/layouts/DefaultLayout.vue')['default']
     ElAside: typeof import('element-plus/es')['ElAside']
     ElContainer: typeof import('element-plus/es')['ElContainer']
     ElDropdown: typeof import('element-plus/es')['ElDropdown']
@@ -31,5 +34,6 @@ declare module 'vue' {
     HomeView: typeof import('./src/views/HomeView.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    TableView: typeof import('./src/views/HomeView.vue/index.js')['default']
   }
 }
