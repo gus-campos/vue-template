@@ -4,7 +4,10 @@
 </script>
 
 <template>
-  <component :is="layout">
+  <component v-if="layout" :is="layout">
     <router-view />
   </component>
+  <template v-else>
+    <router-view />
+  </template>
 </template>
