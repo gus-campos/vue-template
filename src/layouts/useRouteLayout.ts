@@ -7,10 +7,11 @@ const LAYOUTS = {
   default: DefaultLayout,
   authenticated: AuthenticatedLayout,
 };
+type LayoutKey = keyof typeof LAYOUTS;
 
 export function useRouteLayout() {
   const route = useRoute();
-  const layoutKey = route.meta.layout as keyof typeof LAYOUTS;
+  const layoutKey = (route.meta?.layout ?? null) as LayoutKey | null;
 
   if (layoutKey && !(layoutKey in LAYOUTS)) {
     throw new Error(
