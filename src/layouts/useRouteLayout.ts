@@ -10,20 +10,14 @@ const LAYOUTS = {
 
 export function useRouteLayout() {
   const route = useRoute();
+  const layoutKey = route.meta.layout as keyof typeof LAYOUTS;
 
-  const layout = computed(() => {
-    const layoutKey = route.meta.layout as keyof typeof LAYOUTS;
+  if (layoutKey && !(layoutKey in LAYOUTS)) {
+    throw new Error(
+      `Layout key "${layoutKey}" not found. Available: ${Object.keys(LAYOUTS).join(', ')}`,
+    );
+  }
 
-    if (!layoutKey) return null;
-
-    if (!(layoutKey in LAYOUTS)) {
-      const message = `Layout key "${layoutKey}" not found. Available: ${Object.keys(LAYOUTS).join(', ')}`;
-      console.error(message);
-      throw new Error(message);
-    }
-
-    return LAYOUTS[layoutKey as keyof typeof LAYOUTS];
-  });
-
+  const layout = computed(() => (!layoutKey ? null : LAYOUTS[layoutKey]));
   return { layout };
 }
